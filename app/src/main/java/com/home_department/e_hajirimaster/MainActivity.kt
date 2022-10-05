@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragment)
         binding.bottomNavView.setupWithNavController(navController)
 
-        //hello world
 
     }
 }
