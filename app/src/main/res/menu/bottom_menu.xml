@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/upcomingDuties"
+        android:icon="@drawable/ic_police_logo"
+        android:title="Upcoming Duties" />
+    <item
+        android:id="@+id/liveDeployed"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Live Deployment" />
+    <item
+        android:id="@+id/previousDuties"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Previous Duties" />
+    <item
+        android:id="@+id/moreOptions"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="More Options" />
+
+</menu>

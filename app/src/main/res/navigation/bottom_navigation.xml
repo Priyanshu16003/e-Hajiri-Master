@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/upcomingDuties">
+
+    <fragment
+        android:id="@+id/upcomingDuties"
+        android:name="com.home_department.e_hajirimaster.fragments.UpcomingDuties"
+        android:label="upcoming_duties"
+        tools:layout="@layout/upcoming_duties" />
+    <fragment
+        android:id="@+id/liveDeployed"
+        android:name="com.home_department.e_hajirimaster.fragments.LiveDeployed"
+        android:label="live_deployed"
+        tools:layout="@layout/live_deployed" />
+    <fragment
+        android:id="@+id/previousDuties"
+        android:name="com.home_department.e_hajirimaster.fragments.PreviousDuties"
+        android:label="previous_duties"
+        tools:layout="@layout/previous_duties" />
+    <fragment
+        android:id="@+id/moreOptions"
+        android:name="com.home_department.e_hajirimaster.fragments.MoreOptions"
+        android:label="more_options"
+        tools:layout="@layout/more_options" />
+</navigation>
