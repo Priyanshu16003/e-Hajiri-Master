@@ -3,19 +3,19 @@
 
     <item
         android:id="@+id/upcomingDuties"
-        android:icon="@drawable/ic_police_logo"
+        android:icon="@drawable/upcoming_duty"
         android:title="Upcoming Duties" />
     <item
         android:id="@+id/liveDeployed"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/duty_dash"
         android:title="Live Deployment" />
     <item
         android:id="@+id/previousDuties"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/previous_records"
         android:title="Previous Duties" />
     <item
         android:id="@+id/moreOptions"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/more_info"
         android:title="More Options" />
 
 </menu>
