@@ -35,6 +35,9 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
             }
+            else{
+                Toast.makeText(this,"Enter Both fields",Toast.LENGTH_LONG).show()
+            }
         }
 
     }
