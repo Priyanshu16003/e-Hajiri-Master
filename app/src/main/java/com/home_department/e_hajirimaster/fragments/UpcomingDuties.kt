@@ -14,8 +14,7 @@ import com.home_department.e_hajirimaster.ApiClient
 import com.home_department.e_hajirimaster.Demo
 import com.home_department.e_hajirimaster.R
 import com.home_department.e_hajirimaster.UpcomingDutyAdapter
-import com.home_department.e_hajirimaster.databinding.ActivityMainBinding
-import com.home_department.e_hajirimaster.databinding.UpcomingDutiesBinding
+
 import retrofit2.Call
 import retrofit2.Response
 
@@ -32,8 +31,8 @@ class UpcomingDuties : Fragment(R.layout.upcoming_duties) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.upcoming_duties, container, false)
     }
 

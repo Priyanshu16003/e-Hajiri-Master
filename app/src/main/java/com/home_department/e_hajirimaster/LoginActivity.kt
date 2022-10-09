@@ -1,57 +1,25 @@
 package com.home_department.e_hajirimaster
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.firebase.auth.FirebaseAuth
 import com.home_department.e_hajirimaster.databinding.ActivityLoginBinding
-import com.home_department.e_hajirimaster.databinding.ActivityMainBinding
-import retrofit2.Call
-import retrofit2.Response
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : Activity() {
 
     private lateinit var binding: ActivityLoginBinding
     private  lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
+        Thread.sleep(2000)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-//        val client = ApiClient.apiService?.fetchCharacters()
-//
-//        client?.enqueue(object  : retrofit2.Callback<Demo>{
-//            override fun onResponse(
-//                call : Call<Demo>,
-//                response : Response<Demo>
-//            ){
-//                if (response.isSuccessful){
-//
-//                    val result = response.body()?.Duties
-//                    result?.let {
-//                        Log.d("abc", response.body().toString()+""+result[1])
-////                        val adapter = MainAdapter(result)
-////                        val recyclerView = findViewById<RecyclerView>(R.id.recycler)
-////                        recyclerView?.layoutManager= LinearLayoutManager(applicationContext)
-////                        recyclerView?.adapter=adapter
-//                    }
-//
-//                }
-//
-//            }
-//            override fun onFailure(
-//                call : Call<Demo>,
-//                t : Throwable
-//            ){
-//                Log.d("fail","hehehehehe")
-////                Toast.makeText(this,"Unsuccessful",Toast.LENGTH_SHORT).show()
-//            }
-//        }
-//        )
+        actionBar?.hide()
 
         firebaseAuth = FirebaseAuth.getInstance()
 
@@ -67,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     }
                     else{
-                        Toast.makeText(this,"Wrong UserName or Password",Toast.LENGTH_LONG).show()
+                        Toast.makeText(this,"Wrong UserName or Password",Toast.LENGTH_SHORT).show()
                     }
                 }
             }

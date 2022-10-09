@@ -4,6 +4,6 @@
             <item name="windowSplashScreenAnimatedIcon">@drawable/gujaratpolice</item>
             <item name="windowSplashScreenBackground">@color/gray</item>
             <item name="windowSplashScreenAnimationDuration">1000</item>
-            <item name="postSplashScreenTheme">@style/Theme.EHajiriMaster</item>
+            <item name="postSplashScreenTheme">@style/Theme.AppCompat.DayNight.NoActionBar</item>
         </style>
 </resources>
