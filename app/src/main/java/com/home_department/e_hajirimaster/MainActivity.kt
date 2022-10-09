@@ -1,13 +1,17 @@
 package com.home_department.e_hajirimaster
 
+import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.home_department.e_hajirimaster.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivity : FragmentActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -17,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         Thread.sleep(1000)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
+//        supportActionBar?.hide()
 
         val navController = findNavController(R.id.fragment)
         binding.bottomNavView.setupWithNavController(navController)
