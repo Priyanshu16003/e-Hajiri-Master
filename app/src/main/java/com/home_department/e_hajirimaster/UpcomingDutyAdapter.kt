@@ -1,11 +1,10 @@
-package com.home_department.e_hajirimaster.adapters
+package com.home_department.e_hajirimaster
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.home_department.e_hajirimaster.R
 import com.home_department.e_hajirimaster.entity.Duty
 
 class UpcomingDutyAdapter(private val data: List<Duty>) :

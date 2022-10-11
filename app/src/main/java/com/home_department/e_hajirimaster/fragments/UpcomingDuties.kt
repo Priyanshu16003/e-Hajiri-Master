@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.home_department.e_hajirimaster.entity.Demo
 import com.home_department.e_hajirimaster.entity.Duty
 import com.home_department.e_hajirimaster.R
-import com.home_department.e_hajirimaster.adapters.UpcomingDutyAdapter
+import com.home_department.e_hajirimaster.UpcomingDutyAdapter
 import com.home_department.e_hajirimaster.remote.ApiClient
 import retrofit2.Call
 import retrofit2.Response
