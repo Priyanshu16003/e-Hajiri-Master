@@ -19,6 +19,7 @@ class LoginActivity : Activity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         actionBar?.hide()
+
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.btnLogIn.setOnClickListener {
