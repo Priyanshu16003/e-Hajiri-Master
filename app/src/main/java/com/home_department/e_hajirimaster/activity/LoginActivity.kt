@@ -1,8 +1,7 @@
-package com.home_department.e_hajirimaster
+package com.home_department.e_hajirimaster.activity
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -21,9 +20,23 @@ class LoginActivity : Activity() {
         setContentView(binding.root)
         actionBar?.hide()
 
+        authenticateUser()
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if(firebaseAuth.currentUser != null){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun authenticateUser(){
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.button.setOnClickListener{
+        binding.btnLogIn.setOnClickListener{
             val email = binding.email.text.toString()
             val pass = binding.password.text.toString()
 
@@ -42,17 +55,6 @@ class LoginActivity : Activity() {
             else{
                 Toast.makeText(this,"Enter Both fields",Toast.LENGTH_LONG).show()
             }
-        }
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        if(firebaseAuth.currentUser != null){
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
         }
     }
 }

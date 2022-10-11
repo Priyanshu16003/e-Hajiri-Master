@@ -13,8 +13,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
-        app:layout_constraintTop_toTopOf="@id/guideline14"
-        >
+        app:layout_constraintTop_toTopOf="@id/guideline14">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -51,10 +50,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:backgroundTint="@color/gray"
                 app:layout_constraintBottom_toBottomOf="@id/guideline11"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintHorizontal_bias="1.0"
-                android:backgroundTint="@color/gray"
                 app:layout_constraintStart_toStartOf="@id/guideline9"
                 app:layout_constraintTop_toTopOf="@+id/guideline10">
 
@@ -141,7 +140,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Duty Location:"
+                android:text="@string/duty_location"
                 app:layout_constraintBottom_toTopOf="@+id/textView6"
                 app:layout_constraintEnd_toStartOf="@+id/dutyLocation"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
@@ -151,7 +150,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Task Description:"
+                android:text="@string/task_description"
                 app:layout_constraintBottom_toTopOf="@+id/guideline11"
                 app:layout_constraintEnd_toStartOf="@+id/dutyDescription"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"

@@ -1,5 +1,7 @@
-package com.home_department.e_hajirimaster
+package com.home_department.e_hajirimaster.remote
 
+import com.home_department.e_hajirimaster.entity.Demo
+import com.home_department.e_hajirimaster.other.Constants.BASE_URL
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Call
@@ -9,13 +11,11 @@ import retrofit2.http.GET
 
 object ApiClient {
 
-    private val base_url= "https://ssiptm000405.hasura.app/api/rest/"
-
     private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
     private val retrofit : Retrofit by lazy{
         Retrofit.Builder()
-            .baseUrl(base_url)
+            .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
     }
@@ -28,8 +28,5 @@ object ApiClient {
 interface ApiService{
     @GET("duties")
     fun fetchCharacters() : Call<Demo>
-
-//    @GET("character/{id}")
-//    fun fetchindividual(@Path("id") charId : Int) : Call<>
 
 }

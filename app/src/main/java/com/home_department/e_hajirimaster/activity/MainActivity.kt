@@ -1,9 +1,10 @@
-package com.home_department.e_hajirimaster
+package com.home_department.e_hajirimaster.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.home_department.e_hajirimaster.R
 import com.home_department.e_hajirimaster.databinding.ActivityMainBinding
 
 

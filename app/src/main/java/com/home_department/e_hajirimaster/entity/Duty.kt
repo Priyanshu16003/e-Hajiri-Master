@@ -1,4 +1,4 @@
-package com.home_department.e_hajirimaster
+package com.home_department.e_hajirimaster.entity
 
 data class Duty(
     val d_info: String,
