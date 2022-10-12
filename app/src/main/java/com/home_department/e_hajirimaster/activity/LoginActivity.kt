@@ -7,6 +7,9 @@ import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.firebase.auth.FirebaseAuth
 import com.home_department.e_hajirimaster.databinding.ActivityLoginBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginActivity : Activity() {
 
@@ -25,7 +28,7 @@ class LoginActivity : Activity() {
         binding.btnLogIn.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
-            authenticateUser(email,password)
+            CoroutineScope(Dispatchers.IO).launch { authenticateUser(email,password) }
         }
     }
 
@@ -39,7 +42,7 @@ class LoginActivity : Activity() {
         }
     }
 
-    private fun authenticateUser(email:String,password:String){
+    private fun authenticateUser(email:String, password:String){
 
         if(email.isEmpty() && password.isEmpty())
             return Toast.makeText(this,"Enter Both fields",Toast.LENGTH_LONG).show()

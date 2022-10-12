@@ -13,6 +13,7 @@ class UpcomingDutyAdapter(private val data: List<Duty>) :
 
     inner class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(duty: Duty) {
+
             val dutyLocation = itemView.findViewById<TextView>(R.id.dutyLocation)
             val dutyDescription = itemView.findViewById<TextView>(R.id.dutyDescription)
             val dutyDate = itemView.findViewById<TextView>(R.id.dutyDate)
@@ -24,6 +25,7 @@ class UpcomingDutyAdapter(private val data: List<Duty>) :
             dutyDate.text = duty.date
             startTime.text = duty.start_time
             endTime.text = duty.end_time
+
         }
     }
 

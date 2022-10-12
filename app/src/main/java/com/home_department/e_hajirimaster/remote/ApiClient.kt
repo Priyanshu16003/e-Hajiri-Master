@@ -27,6 +27,6 @@ object ApiClient {
 
 interface ApiService{
     @GET("duties")
-    fun fetchCharacters() : Call<Demo>
+    fun fetchUpcomingDuty() : Call<Demo>
 
 }

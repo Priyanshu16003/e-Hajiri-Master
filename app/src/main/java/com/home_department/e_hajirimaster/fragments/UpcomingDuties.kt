@@ -34,52 +34,40 @@ class UpcomingDuties : Fragment(R.layout.upcoming_duties) {
         super.onViewCreated(view, savedInstanceState)
 
         getUpcomingDuty(view)
-
     }
 
-    private fun setupRecyclerView(result: List<Duty>, view: View) {
-        val adapter = UpcomingDutyAdapter(result)
+
+    private fun setUpRecyclerView(view: View, result: List<Duty>) {
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+        val adapter = UpcomingDutyAdapter(result)
         recyclerView?.layoutManager = LinearLayoutManager(context)
         recyclerView?.adapter = adapter
     }
 
-    private fun getUpcomingDuty(view: View) {
 
-        val client = ApiClient.apiService?.fetchCharacters()
+    private fun getUpcomingDuty(view: View) {
+        val client = ApiClient.apiService?.fetchUpcomingDuty()
         client?.enqueue(object : retrofit2.Callback<Demo> {
             override fun onResponse(
                 call: Call<Demo>,
                 response: Response<Demo>
             ) {
                 if (response.isSuccessful) {
-
                     val result = response.body()?.Duties
+                    Log.d("Tag123", result.toString())
                     result?.let {
-                        Log.d("abc", response.body().toString() + "" + result[1])
-                        setupRecyclerView(result, view)
-                        //setting up recyclerview
+                        setUpRecyclerView(view, result)
                     }
                 }
             }
-
             override fun onFailure(
                 call: Call<Demo>,
                 t: Throwable
             ) {
-                Log.d("fail", "he")
                 Toast.makeText(context, "Unsuccessful", Toast.LENGTH_SHORT).show()
             }
         }
         )
-
     }
-
 }
-
-
-//settingup recyclerview
-//                        val adapter = UpcomingDutyAdapter(result)
-//
-//                        recyclerView?.layoutManager = LinearLayoutManager(context)
-//                        recyclerView?.adapter = adapter
