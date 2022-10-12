@@ -32,7 +32,7 @@ class UpcomingDutyAdapter(private val data: List<Duty>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.upcoming_duties_card, parent, false)
+                .inflate(R.layout.upcoming_duty_card, parent, false)
         )
     }
 

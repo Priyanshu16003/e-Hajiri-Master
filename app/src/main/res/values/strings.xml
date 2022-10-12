@@ -5,4 +5,5 @@
     <string name="task_description">Task Description:</string>
     <string name="duty_location">Duty Location:</string>
     <string name="log_out">Log Out</string>
+    <string name="to">To</string>
 </resources>
