@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.home_department.e_hajirimaster.entity.Demo
@@ -14,12 +15,16 @@ import com.home_department.e_hajirimaster.entity.Duty
 import com.home_department.e_hajirimaster.R
 import com.home_department.e_hajirimaster.adapters.UpcomingDutyAdapter
 import com.home_department.e_hajirimaster.remote.ApiClient
+import com.home_department.e_hajirimaster.viewmodels.MainViewModel
 import retrofit2.Call
 import retrofit2.Response
 
 
 class UpcomingDuties : Fragment(R.layout.upcoming_duties) {
 
+    private val viewModel : MainViewModel by lazy {
+        ViewModelProvider(this)[MainViewModel::class.java]
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,27 +52,31 @@ class UpcomingDuties : Fragment(R.layout.upcoming_duties) {
 
 
     private fun getUpcomingDuty(view: View) {
-        val client = ApiClient.apiService?.fetchUpcomingDuty()
-        client?.enqueue(object : retrofit2.Callback<Demo> {
-            override fun onResponse(
-                call: Call<Demo>,
-                response: Response<Demo>
-            ) {
-                if (response.isSuccessful) {
-                    val result = response.body()?.Duties
-                    Log.d("Tag123", result.toString())
-                    result?.let {
-                        setUpRecyclerView(view, result)
-                    }
-                }
-            }
-            override fun onFailure(
-                call: Call<Demo>,
-                t: Throwable
-            ) {
-                Toast.makeText(context, "Unsuccessful", Toast.LENGTH_SHORT).show()
-            }
+
+        viewModel.upcomingDutyLiveData.observe(viewLifecycleOwner) {
+            setUpRecyclerView(view, it)
         }
-        )
+//        val client = ApiClient.apiService?.fetchUpcomingDuty()
+//        client?.enqueue(object : retrofit2.Callback<Demo> {
+//            override fun onResponse(
+//                call: retrofit2.Call<Demo>,
+//                response: Response<Demo>
+//            ) {
+//                if (response.isSuccessful) {
+//                    val result = response.body()?.Duties
+//                    Log.d("Tag123", result.toString())
+//                    result?.let {
+//                        setUpRecyclerView(view, result)
+//                    }
+//                }
+//            }
+//            override fun onFailure(
+//                call: Call<Demo>,
+//                t: Throwable
+//            ) {
+//                Toast.makeText(context, "Unsuccessful", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//        )
     }
 }
