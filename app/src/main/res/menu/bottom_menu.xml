@@ -3,19 +3,19 @@
 
     <item
         android:id="@+id/upcomingDuties"
-        android:icon="@drawable/upcoming_duty"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
         android:title="Upcoming Duties" />
     <item
         android:id="@+id/liveDeployed"
-        android:icon="@drawable/duty_dash"
+        android:icon="@drawable/ic_baseline_backup_table_24"
         android:title="Live Deployment" />
     <item
         android:id="@+id/previousDuties"
-        android:icon="@drawable/previous_records"
+        android:icon="@drawable/ic_baseline_history_24"
         android:title="Previous Duties" />
     <item
         android:id="@+id/moreOptions"
-        android:icon="@drawable/more_info"
+        android:icon="@drawable/ic_baseline_more_horiz_24"
         android:title="More Options" />
 
 </menu>

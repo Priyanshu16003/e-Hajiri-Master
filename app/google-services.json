@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "486170612156",
+    "firebase_url": "https://e-hajiri-master-default-rtdb.firebaseio.com",
+    "project_id": "e-hajiri-master",
+    "storage_bucket": "e-hajiri-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486170612156:android:346969ef02391178bd1bb9",
+        "android_client_info": {
+          "package_name": "com.home_department.e_hajirimaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486170612156-pcmla56gual9ds55i7ruotj18v5rgqka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.home_department.e_hajirimaster",
+            "certificate_hash": "5362b59152b928dad2f8292cfe9fc6fa97a29031"
+          }
+        },
+        {
+          "client_id": "486170612156-doj6l62tpsklo7a4g7ptj2mkq0gcdlcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwcSabp583lFUw1wXGnHzGjSk8iv0PCw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486170612156-doj6l62tpsklo7a4g7ptj2mkq0gcdlcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
