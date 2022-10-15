@@ -4,11 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PreviousDuties">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPreviousDuty"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context=".activity.MyProfile">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

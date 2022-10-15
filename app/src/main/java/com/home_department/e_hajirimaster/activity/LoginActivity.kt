@@ -18,7 +18,6 @@ class LoginActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
-        Thread.sleep(2000)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         actionBar?.hide()
