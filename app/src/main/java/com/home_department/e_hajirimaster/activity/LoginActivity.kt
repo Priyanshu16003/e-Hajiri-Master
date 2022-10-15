@@ -7,9 +7,7 @@ import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.firebase.auth.FirebaseAuth
 import com.home_department.e_hajirimaster.databinding.ActivityLoginBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+
 
 class LoginActivity : Activity() {
 
@@ -27,7 +25,7 @@ class LoginActivity : Activity() {
         binding.btnLogIn.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
-            CoroutineScope(Dispatchers.IO).launch { authenticateUser(email,password) }
+            authenticateUser(email,password)
         }
     }
 
